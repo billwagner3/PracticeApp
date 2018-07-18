@@ -1,0 +1,19 @@
+ <app-menu></app-menu>
+
+<form [formGroup]="form">
+  <div style="text-align:center">
+    <div>
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index">
+        <input type="checkbox" [formControlName]="i">
+        <h5 [style.margin-left]="'20px'">{{ keyNames[i].name }}</h5>
+      </label>
+    </div>
+    <div>
+        <h3 *ngIf="dataPassed">Starting Key: {{ submit() }}</h3>
+        <h4>Keys to Drill: {{ keysToDrill() }}</h4>
+      <button   class="btn btn-primary" (click)="submit()">Get a Random Key</button>      
+      
+    </div>
+  </div>
+</form>
+<app-key-certainty-drill></app-key-certainty-drill>

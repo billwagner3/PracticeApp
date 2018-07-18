@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="">
+      <a routerLink="/" class="navbar-brand">Drill Page</a>
+    </div>  
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a routerLink="/key-pick" id="menu"> Choose Keys </a></li>
+        <li routerLinkActive="active"><a routerLink="/drill-page" id="menu"> Drill Page </a></li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-menu" role="button"> Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;">Save Data</a></li>
+            <li><a style="cursor: pointer;">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

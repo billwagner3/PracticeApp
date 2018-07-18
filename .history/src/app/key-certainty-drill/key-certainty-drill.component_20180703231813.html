@@ -1,0 +1,33 @@
+<!-- <app-menu (featureSelected)="onNavigate($event)"></app-menu> -->
+<div class="container">
+  
+  <form>
+    <div style="text-align:center">
+      <h1>
+        Welcome to {{ title }}!<br><br>
+      </h1>   
+      <h3>Go to Choose Keys on the menu and pick which keys you wish to drill. Once you have picked your keys, hit the submit
+        button and you will be directed back to this page to start your drill.
+      </h3><br><br>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2" >
+        <input 
+        class="scaleInput" 
+        type="text" 
+        [(ngModel)]="typeKey"     
+        [ngModelOptions]="{standalone: true}"> 
+        <!-- <h1 *ngIf="dataPassed else errors">Key: {{ test }}</h1> -->
+        <h4>Your Key Spelling is {{ printSpelling() }}</h4>
+        
+        <button class="btn btn-primary" (click)="getKeyClass(typeKey)">Check Your Key Spelling</button>
+        <br><br>  
+        
+        
+        <!-- <h3 *ngIf="wrongInput">I'm sorry, please try again</h3> -->
+      </div>
+      
+    </div>
+  </form>  
+</div>
+<audio id="correctSound" src="../../assets/ding.wav" preload="auto"></audio>

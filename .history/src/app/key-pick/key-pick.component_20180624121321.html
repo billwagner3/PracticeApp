@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div style="text-align:center">
+    <div>
+      <input type="checkbox" [formControlName]="i" value="C">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="C">C Major</label>
+      <input type="checkbox" [formControlName]="i" value="G">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="G">G Major</label>
+      <input type="checkbox" [formControlName]="i" value="D">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="D">D Major</label>
+      <input type="checkbox" [formControlName]="i" value="A">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="A">A Major</label>
+      <input type="checkbox" [formControlName]="i" value="E"> 
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="E">E Major</label>
+      <input type="checkbox" [formControlName]="i" value="B">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="B">B Major</label>
+      <input type="checkbox" [formControlName]="i" value="F#">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="F#">F# Major</label>
+      <input type="checkbox" [formControlName]="i" value="C#">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="C#">C# Major</label>
+      <input type="checkbox" [formControlName]="i" value="F">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="F">F Major</label>
+      <input type="checkbox" [formControlName]="i" value="Bb">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Bb">Bb Major</label>
+      <input type="checkbox" [formControlName]="i" value="Eb">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Eb">Eb Major</label>
+      <input type="checkbox" [formControlName]="i" value="Ab">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Ab">Ab Major</label>
+      <input type="checkbox" [formControlName]="i" value="Db">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Db">Db Major</label>
+      <input type="checkbox" [formControlName]="i" value="Gb">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Gb">Gb Major</label>
+      <input type="checkbox" [formControlName]="i" value="Cb">
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index" for="Cb">Cb Major</label>
+    </div>
+    <!-- <div>
+      <label ng-repeat="keys in ['C', 'G', 'D', 'A']">
+        <input type="checkbox" checklist-model="selectedKeys" checklist-value="keys"> {{ tyepKey }}
+      </label>
+    </div> -->
+    
+    <div>
+      <button  class="btn btn-primar" >Start the Key Certainty Drill</button>
+      <h1 *ngIf="dataPassed else errors">Keys: {{ keyNames[i].name }}</h1>
+    </div>
+  </div>
+</form>

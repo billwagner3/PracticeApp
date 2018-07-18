@@ -1,0 +1,25 @@
+ <app-menu></app-menu>
+
+<form [formGroup]="form">
+  <div style="text-align:center">
+      <h1>
+          Welcome to {{ title }}!<br><br>
+        </h1>   
+        <h3>Go to Choose Keys on the menu and pick which keys you wish to drill. Once you have picked your keys, hit the submit
+          button and you will be directed back to this page to start your drill.
+        </h3><br><br>
+    <div>
+      <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index">
+        <input type="checkbox" [formControlName]="i">
+        <h5 [style.margin-left]="'20px'">{{ keyNames[i].name }}</h5>
+      </label>
+    </div>
+    <div>
+        
+        <h4>Keys to Drill: {{ keysToDrill() }}</h4>
+      <button   class="btn btn-primary" (click)="submit()">Get a Random Key</button>      
+      <h3>Key to Drill:</h3><h3 id="drillKey"></h3>
+    </div>
+  </div>
+</form>
+<app-key-certainty-drill></app-key-certainty-drill>
