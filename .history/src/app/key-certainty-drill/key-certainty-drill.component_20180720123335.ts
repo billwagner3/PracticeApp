@@ -37,7 +37,7 @@ export class KeyCertaintyDrillComponent implements OnInit {
       alert("You got it right!");
       })
     } else{       
-        let audioPlayer2 = <HTMLVideoElement> document.getElementById('wrongSound');
+        let audioPlayer2 = <HTMLVideoElement> document.getElementById('WrongSound');
         audioPlayer2.play()
         .then(function() {
           alert("Incorrect answer, please try again");

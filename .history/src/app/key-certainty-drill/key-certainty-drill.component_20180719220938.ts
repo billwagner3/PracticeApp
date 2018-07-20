@@ -36,13 +36,8 @@ export class KeyCertaintyDrillComponent implements OnInit {
     .then(function() {
       alert("You got it right!");
       })
-    } else{       
-        let audioPlayer2 = <HTMLVideoElement> document.getElementById('wrongSound');
-        audioPlayer2.play()
-        .then(function() {
-          alert("Incorrect answer, please try again");
-        })
-        
+    } else{         
+        alert("Incorrect answer, please try again");
   }   
 } 
     )};
@@ -51,11 +46,11 @@ export class KeyCertaintyDrillComponent implements OnInit {
     return this.typeKey;
   }
 
-  // loadedFeature = 'drill';
+  loadedFeature = 'drill';
 
-  // onNavigate(feature: string) {
-  //   this.loadedFeature = feature;
-  // }
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 
   ngOnInit() {
   }

@@ -177,7 +177,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/key-certainty-drill/key-certainty-drill.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <app-menu (featureSelected)=\"onNavigate($event)\"></app-menu> -->\n<div class=\"container\">\n  <audio id=\"correctSound\" src=\"../../assets/ding.wav\" preload=\"auto\"></audio>\n  <form>\n    <div style=\"text-align:center\">\n      \n    </div>\n    <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2\" >\n        <input \n        class=\"scaleInput\" \n        type=\"text\" \n        [(ngModel)]=\"typeKey\"     \n        [ngModelOptions]=\"{standalone: true}\"> \n        <!-- <h1 *ngIf=\"dataPassed else errors\">Key: {{ test }}</h1> -->\n        <h4>Your Key Spelling is {{ printSpelling() }}</h4>\n        \n        <button class=\"btn btn-primary\" (click)=\"getKeyClass(typeKey)\">Check Your Key Spelling</button>\n        <br><br>  \n        \n        <!-- <h3 *ngIf=\"wrongInput\">I'm sorry, please try again</h3> -->\n      </div>\n      \n    </div>\n  </form>  \n</div>\n\n"
+module.exports = "<!-- <app-menu (featureSelected)=\"onNavigate($event)\"></app-menu> -->\n<div class=\"container\">\n  <audio id=\"correctSound\" src=\"../../assets/ding.wav\" preload=\"auto\"></audio>\n  <audio id=\"wrongSound\" src=\"../../assets/WrongAnswer.wav\" preload=\"auto\"></audio>\n  <form>\n    <div style=\"text-align:center\">\n      \n    </div>\n    <div class=\"row\">\n      <div class=\"col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2\" >\n        <input \n        class=\"scaleInput\" \n        type=\"text\" \n        [(ngModel)]=\"typeKey\"     \n        [ngModelOptions]=\"{standalone: true}\"> \n        <!-- <h1 *ngIf=\"dataPassed else errors\">Key: {{ test }}</h1> -->\n        <h4>Your Key Spelling is {{ printSpelling() }}</h4>\n        \n        <button class=\"btn btn-primary\" (click)=\"getKeyClass(typeKey)\">Check Your Key Spelling</button>\n        <br><br>  \n        \n        <!-- <h3 *ngIf=\"wrongInput\">I'm sorry, please try again</h3> -->\n      </div>\n      \n    </div>\n  </form>  \n</div>\n\n"
 
 /***/ }),
 
@@ -209,7 +209,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var KeyCertaintyDrillComponent = /** @class */ (function () {
-    // @Input() keyPick: KeyPickComponent;
     function KeyCertaintyDrillComponent(keysService) {
         this.keysService = keysService;
         this.typeKey = '';
@@ -217,7 +216,6 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
         this.test = '';
         this.errors = false;
         this.hasError = false;
-        this.loadedFeature = 'drill';
     }
     KeyCertaintyDrillComponent.prototype.getKeyClass = function (typeKey) {
         var _this = this;
@@ -236,6 +234,8 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
                 });
             }
             else {
+                var audioPlayer_1 = document.getElementById('WrongAnswer');
+                audioPlayer_1.addEventListener;
                 alert("Incorrect answer, please try again");
             }
         });
@@ -244,9 +244,10 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
     KeyCertaintyDrillComponent.prototype.printSpelling = function () {
         return this.typeKey;
     };
-    KeyCertaintyDrillComponent.prototype.onNavigate = function (feature) {
-        this.loadedFeature = feature;
-    };
+    // loadedFeature = 'drill';
+    // onNavigate(feature: string) {
+    //   this.loadedFeature = feature;
+    // }
     KeyCertaintyDrillComponent.prototype.ngOnInit = function () {
     };
     KeyCertaintyDrillComponent = __decorate([
@@ -267,7 +268,7 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
 /***/ "./src/app/key-pick/key-pick.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <app-menu></app-menu>\n\n<form [formGroup]=\"form\">\n  <div style=\"text-align:center\">\n      <h1>\n          Welcome to {{ title }}!<br><br>\n        </h1>   \n        <h3>Go to Choose Keys on the menu and pick which keys you wish to drill. Once you have picked your keys, hit the submit\n          button and you will be directed back to this page to start your drill.\n        </h3><br><br>\n    <div>\n      <label formArrayName=\"keyNames\" *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n        <input type=\"checkbox\" [formControlName]=\"i\">\n        <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n      </label>\n    </div>\n    <div>\n        \n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n      <button   class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>      \n      <h3>Key to Drill:</h3><h3 id=\"drillKey\"></h3>\n    </div>\n  </div>\n</form>\n<app-key-certainty-drill></app-key-certainty-drill>"
+module.exports = " <app-menu></app-menu>\n\n<form [formGroup]=\"form\">\n  <div style=\"text-align:center\">\n      <h1>\n          Welcome to {{ title }}!<br><br>\n        </h1>   \n        <h3>Go to Choose Keys on the menu and pick which keys you wish to drill. Once you have picked your keys, hit the submit\n          button and you will be directed back to this page to start your drill.\n        </h3><br><br>\n    <div>\n      <label formArrayName=\"keyNames\" *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n        <input type=\"checkbox\" [formControlName]=\"i\">\n        <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n      </label>\n    </div>\n    <div>\n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n      <button   class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>      \n      <h3>Key to Drill:</h3><h3 id=\"drillKey\"></h3>\n    </div>\n  </div>\n</form>\n<app-key-certainty-drill></app-key-certainty-drill>"
 
 /***/ }),
 
