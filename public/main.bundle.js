@@ -194,9 +194,8 @@ module.exports = "input.scaleInput[type=\"text\"] {\n  width: 300px; }\n"
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeyCertaintyDrillComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__key_pick_key_pick_component__ = __webpack_require__("./src/app/key-pick/key-pick.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -209,15 +208,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var KeyCertaintyDrillComponent = /** @class */ (function () {
+    // @Input() keyPick: KeyPickComponent;
     function KeyCertaintyDrillComponent(keysService) {
         this.keysService = keysService;
-        this.makeUpperCase = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
         this.typeKey = '';
         this.dataPassed = false;
         this.test = '';
-        this.error = 'You got it wrong, try again';
         this.errors = false;
         this.hasError = false;
         this.loadedFeature = 'drill';
@@ -228,12 +225,8 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
             .subscribe(function (test) {
             _this.test = test;
             console.log(test);
-            // let x = this.keyPick.checkAnswer(typeKey);
-            // console.log(x);
             var isRightKey = document.getElementById("drillKey").innerHTML;
             console.log(isRightKey);
-            // const hasError = false;
-            // let promise = new Promise(() => {    
             var audioPlayer = document.getElementById('correctSound');
             audioPlayer.addEventListener;
             if (test == isRightKey) {
@@ -248,9 +241,6 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
         });
     };
     ;
-    // runKey() {
-    //   this.keyPick.checkAnswer
-    // }
     KeyCertaintyDrillComponent.prototype.printSpelling = function () {
         return this.typeKey;
     };
@@ -259,21 +249,13 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
     };
     KeyCertaintyDrillComponent.prototype.ngOnInit = function () {
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", Object)
-    ], KeyCertaintyDrillComponent.prototype, "makeUpperCase", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__key_pick_key_pick_component__["a" /* KeyPickComponent */])
-    ], KeyCertaintyDrillComponent.prototype, "keyPick", void 0);
     KeyCertaintyDrillComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-key-certainty-drill',
             template: __webpack_require__("./src/app/key-certainty-drill/key-certainty-drill.component.html"),
             styles: [__webpack_require__("./src/app/key-certainty-drill/key-certainty-drill.component.scss")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__keys_service__["a" /* KeysService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__keys_service__["a" /* KeysService */]])
     ], KeyCertaintyDrillComponent);
     return KeyCertaintyDrillComponent;
 }());

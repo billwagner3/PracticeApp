@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 import { KeyPickComponent } from '../key-pick/key-pick.component';
 import { KeysService } from '../keys.service';
@@ -13,7 +13,7 @@ import 'rxjs/Rx';
 })
 export class KeyCertaintyDrillComponent implements OnInit {
 
-  
+  // @Input() keyPick: KeyPickComponent;
   
   constructor(private keysService: KeysService) {
   }

@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  loadedFeature = 'key-certainty-drill';
+  loadedFeature = 'key-certainty-drill'; 
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;
