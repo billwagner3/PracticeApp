@@ -6,9 +6,12 @@ import { KeyCertaintyDrillComponent } from './key-certainty-drill/key-certainty-
 import { AppComponent } from './app.component';
 
 const appRoutes: Routes = [
-    { path: '', redirectTo: '/key-certainty-drill', pathMatch: 'full' },
-    { path: 'key-certainty-drill', component: KeyCertaintyDrillComponent },
-    { path: 'key-pick', component: KeyPickComponent },
+
+        { path: 'app-root', component: AppComponent}
+
+    // { path: '', redirectTo: '/key-certainty-drill', pathMatch: 'full' },
+    // { path: 'key-certainty-drill', component: KeyCertaintyDrillComponent },
+    // { path: 'key-pick', component: KeyPickComponent },
 ];
 
 @NgModule({

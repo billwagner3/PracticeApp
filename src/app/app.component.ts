@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   loadedFeature = 'key-certainty-drill'; 
 
+  constructor(private elementRef: ElementRef) {}
+
   onNavigate(feature: string) {
     this.loadedFeature = feature;
   }
+  // colorEntireDom() {
+  //   this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#000000';
+  // }
 }

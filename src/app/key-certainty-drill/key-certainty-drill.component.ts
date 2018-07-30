@@ -41,8 +41,7 @@ export class KeyCertaintyDrillComponent implements OnInit {
         audioPlayer2.play()
         .then(function() {
           alert("Incorrect answer, please try again");
-        })
-        
+        })        
   }   
 } 
     )};

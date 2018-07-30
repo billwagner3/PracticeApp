@@ -1,12 +1,12 @@
- <app-menu></app-menu>
+ <!-- <app-menu></app-menu> -->
 
-<form [formGroup]="form">
+<form class="form-color" [formGroup]="form">
   <div style="text-align:center">
       <h1>
           Welcome to {{ title }}!<br><br>
         </h1>   
-        <h3>Go to Choose Keys on the menu and pick which keys you wish to drill. Once you have picked your keys, hit the submit
-          button and you will be directed back to this page to start your drill.
+        <h3>Click the checkboxes for each key you wish to drill. Once you have picked your keys, hit the submit
+          button and the program will randomly pick a key to start with. Once your key is displayed, type in the spelling for that key using all capital letters, the # symbol for sharps, and the lowercase 'b' for the flat symbol. Leave a space between each note. Please note, the answer will be wrong if you don't have a space between each note and use caps. 
         </h3><br><br>
     <div>
       <label formArrayName="keyNames" *ngFor="let keyName of form.controls.keyNames.controls; let i = index">
@@ -21,4 +21,3 @@
     </div>
   </div>
 </form>
-<app-key-certainty-drill></app-key-certainty-drill>

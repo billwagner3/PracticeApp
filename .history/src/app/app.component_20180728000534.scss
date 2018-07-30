@@ -1,0 +1,10 @@
+@import '../../styles.scss';
+
+.form-color {
+    @include main-colors();
+}
+
+input.scaleInput[type="text"] {
+
+    width: 300px;
+}

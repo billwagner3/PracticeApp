@@ -1,0 +1,12 @@
+html {background-color: aquamarine}
+
+@mixin main-colors {
+    color: #2a89e2;
+    background-color: aquamarine;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+

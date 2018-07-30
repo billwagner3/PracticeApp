@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -29,6 +30,7 @@ import { KeyCertaintyDrillComponent } from './key-certainty-drill/key-certainty-
     HttpModule,
     HttpClientModule,
     AlertModule.forRoot(),
+    TooltipModule.forRoot(),
     AppRoutingModule,
     RouterModule
   ],
