@@ -1,0 +1,10 @@
+@import '../../styles.scss';
+
+
+body.form-color {
+  
+  @include main-colors;
+  font-family: Gill Sans, sans-serif;
+  
+}
+

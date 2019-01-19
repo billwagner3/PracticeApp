@@ -1,0 +1,9 @@
+@import '../../styles.scss';
+
+$font: Gill Sans, sans-serif
+
+body; form-color font {
+    @include main-colors;
+    font: $font;
+  }
+

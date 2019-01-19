@@ -1,0 +1,13 @@
+html {background-color: #ffffff}
+
+@mixin main-colors {
+  color: #020101;
+  background-color: #752424;
+  
+  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+

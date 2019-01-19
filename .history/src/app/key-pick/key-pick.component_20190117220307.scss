@@ -1,0 +1,9 @@
+@import '../../styles.scss';
+
+$font: source-sans-pro
+
+body form-color font {
+    @include main-colors;
+    font: $font;
+  }
+

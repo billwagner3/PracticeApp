@@ -1,0 +1,29 @@
+@import '../../styles.scss';
+
+
+body.form-color {
+  @include main-colors;
+  font-family: Gill Sans, sans-serif;
+}
+
+img.front-page-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+section.container {
+  margin-left: 20px;
+  background-color: pink;
+  text-align: left;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  wi
+
+  width: 40%;
+
+}
+

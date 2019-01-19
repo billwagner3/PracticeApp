@@ -1,0 +1,8 @@
+@import '../../styles.scss';
+
+
+body.form-color {
+    @include main-colors;
+    font: source sans pro;
+  }
+

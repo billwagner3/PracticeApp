@@ -1,0 +1,33 @@
+@import '../../styles.scss';
+
+
+body.form-color {
+  @include main-colors;
+  font-family: Gill Sans, sans-serif;
+}
+
+img.front-page-pic {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+section.container-fluid {
+  
+  background-color:#7FC1DE;
+  text-align: left;
+  padding-top: 40px;
+  font-size: 8vw;
+  padding-bottom: 40px;
+  max-width: 1280px;
+
+}
+
+ul.h3 {
+  padding-top: -20px;
+}
+

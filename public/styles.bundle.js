@@ -159,7 +159,7 @@ module.exports = "@charset \"UTF-8\";\n/*!\n *  Font Awesome 4.7.0 by @davegandy
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/sass-loader/lib/loader.js??ref--8-3!./src/styles.scss":
 /***/ (function(module, exports) {
 
-module.exports = "html {\n  background-color: #111615; }\n"
+module.exports = "html {\n  background-color: #ffffff; }\n"
 
 /***/ }),
 
