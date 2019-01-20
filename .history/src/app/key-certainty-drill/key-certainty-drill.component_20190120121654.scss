@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+input {
+  &.scale-input [type='text'] {
+    width: 300px;
+    }
+}
+
+body {
+  &.form-color {
+    @include main-colors;
+    }
+}
+
+div {
+  &.butt {
+    margin-left: ce;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+  }
+}
