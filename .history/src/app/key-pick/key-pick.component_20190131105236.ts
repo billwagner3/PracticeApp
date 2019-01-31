@@ -59,11 +59,11 @@ export class KeyPickComponent implements OnInit {
  
   keysToDrill() {
     const onesChecked = this.form.value.keyNames
-      .map((v, i) => v ? this.keyNames[i].name : null)
-      .filter(v => v !== null);
-      // this.router.navigate(['../key-certainty-drill/key-certainty-drill.component.html'])
-      return onesChecked;
-    }
+    .map((v, i) => v ? this.keyNames[i].name : null)
+    .filter(v => v !== null);
+    // this.router.navigate(['../key-certainty-drill/key-certainty-drill.component.html'])
+    return onesChecked;
+  }
  
   submit() {
     let keysPicked = this.form.value.keyNames
@@ -100,7 +100,8 @@ export class KeyPickComponent implements OnInit {
         // get a list of checkbox values (boolean)
         .map(control => control.value)
         // total up the number of checked checkboxes
-        .reduce((prev, next) => next ? prev + next : prev, 0);  
+        .reduce((prev, next) => next ? prev + next : prev, 0);
+  
       // if the total is not greater than the minimum, return the error message
       return totalSelected >= min ? null : { required: true };
     }; 

@@ -59,11 +59,11 @@ export class KeyPickComponent implements OnInit {
  
   keysToDrill() {
     const onesChecked = this.form.value.keyNames
-      .map((v, i) => v ? this.keyNames[i].name : null)
-      .filter(v => v !== null);
-      // this.router.navigate(['../key-certainty-drill/key-certainty-drill.component.html'])
-      return onesChecked;
-    }
+    .map((v, i) => v ? this.keyNames[i].name : null)
+    .filter(v => v !== null);
+    // this.router.navigate(['../key-certainty-drill/key-certainty-drill.component.html'])
+    return onesChecked;
+  }
  
   submit() {
     let keysPicked = this.form.value.keyNames
