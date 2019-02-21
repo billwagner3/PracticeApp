@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { Component, ElementRef } from '@angular/core';
 export class AppComponent {
   loadedFeature = 'key-certainty-drill'; 
 
-  constructor(private elementRef: ElementRef) {}
+  // constructor(private elementRef: ElementRef) {}
 
   onNavigate(feature: string) {
     this.loadedFeature = feature;

@@ -457,14 +457,14 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/key-certainty-drill/key-certainty-drill.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body class=\"form-color\">\n  <div class=\"container\">\n    <!-- <audio id=\"correctSound\" src=\"../../assets/ding.wav\" preload=\"auto\" type=\"audio\"></audio>\n    <audio id=\"wrongSound\" src=\"../../assets/WrongAnswer.wav\" preload=\"auto\" type=\"audio\"></audio> -->\n    <form>\n      <div style=\"text-align:center\">     \n        <div class=\"row\">\n          <div id=\"log\" ></div>\n            <br>\n              <div class=\"col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-1\" >\n                <input \n                  class=\"scale-input\" \n                  type=\"text\" \n                  [(ngModel)]=\"typeKey\"     \n                  [ngModelOptions]=\"{standalone: true}\">       \n                <br><br>                    \n              <h4>Your Key Spelling is {{ printSpelling() }}</h4>         \n            <br><br> \n            <div class=\"butt\">     \n          <button class=\"btn btn-primary\" \n                  (click)=\"getKeyClass(typeKey)\" \n                  >Check Your Key Spelling</button>\n            </div>   \n            <br><br>            \n          </div>           \n        </div>\n      </div>      \n      </form>  \n    </div>\n  <script src=\"http://192.168.0.12:4578/target/target-script-min.js\"></script>\n</body>\n"
+module.exports = "<body class=\"form-color\">\n  <form>\n    <div style=\"text-align:center\">     \n      <div class=\"container-fluid\">\n          <div id=\"log\" ></div>\n                <input \n                  class=\"scale-input\" \n                  type=\"text\" \n                  [(ngModel)]=\"typeKey\"     \n                  [ngModelOptions]=\"{standalone: true}\">       \n                <br><br>                    \n              <h4>Your Key Spelling is {{ printSpelling() }}</h4>         \n            <br><br> \n            <div class=\"butt\">     \n          <button class=\"btn btn-primary\" \n                  (click)=\"getKeyClass(typeKey)\" \n                  >Check Your Key Spelling</button>\n            </div>   \n            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            \n      </div>      \n     \n    </div>\n  <script src=\"http://192.168.0.12:4578/target/target-script-min.js\"></script>\n  </form>  \n</body>\n"
 
 /***/ }),
 
 /***/ "./src/app/key-certainty-drill/key-certainty-drill.component.scss":
 /***/ (function(module, exports) {
 
-module.exports = "html {\n  background-color: #ffffff; }\n\ninput.scale-input [type='text'] {\n  width: 300px; }\n\nbody.form-color {\n  background-color: #ffffff;\n  color: #020101;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  width: 100%; }\n\ndiv.butt {\n  text-align: center; }\n"
+module.exports = "html {\n  background-color: #ffffff; }\n\ninput.scale-input [type='text'] {\n  width: 300px; }\n\nbody.form-color {\n  background-color: #ffffff;\n  color: #020101;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  width: 100%; }\n\ndiv.butt {\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: -35px;\n  position: relative;\n  text-align: center; }\n"
 
 /***/ }),
 
@@ -562,7 +562,7 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
 /***/ "./src/app/key-pick/key-pick.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <!-- <app-menu></app-menu> -->\n<body class=\"form-color\" >\n  <img class=\"front-page-pic img-responsive\" src=\"../../assets/banner.PNG\">\n    <form  [formGroup]=\"form\">\n      <div style=\"text-align:center\">   \n        <h1>Welcome!</h1><br><br>            \n      <section class=\"container-fluid rounded\">\n        <div>\n          <h2 class=\"directions\">Directions:</h2>\n          <ul>\n            <h3>\n              <li>Click the checkboxes for each key you wish to drill.</li><br>\n              <li>Once you have picked your keys, hit the submit\n                  button and the program will randomly pick a key to start with.</li> <br>\n              <li>Once your key is displayed, type in the spelling for that key using all capital letters, the # symbol for sharps, and the lowercase 'b' for the flat symbol. Leave a space between each note.</li><br>\n              <li>Please note, the answer will be wrong if you don't have a space between each note and use caps.</li> \n            </h3>\n          </ul>\n        </div>  \n      </section><br><br><br>\n      <div>\n        <label formArrayName=\"keyNames\" \n               class=\"formGroup\" \n               *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n          <input type=\"checkbox\" \n                 [formControlName]=\"i\">\n          <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n        </label>\n      </div>\n    <br><br>\n      <div>\n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n          <br>\n        <button class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>   \n        <br><br>   \n        <h3>Key to Drill:</h3><h3 id=\"drillKey\"></h3>\n        <br><br>\n      </div>\n    </div>\n  </form>\n</body>\n"
+module.exports = " <!-- <app-menu></app-menu> -->\n<body class=\"form-color\" >\n  <img class=\"front-page-pic img-responsive\" src=\"../../assets/banner.PNG\">\n    <form  [formGroup]=\"form\">\n      <div style=\"text-align:center\">   \n        <h1>Welcome!</h1><br>          \n      <section class=\"container-fluid rounded\">\n        <div>\n          <h2 class=\"directions\">Directions:</h2>\n          <ul>\n            <h3>\n              <li>Click the checkboxes for each key you wish to drill.</li><br>\n              <li>Once you have picked your keys, hit the submit\n                  button and the program will randomly pick a key to start with.</li> <br>\n              <li>Once your key is displayed, type in the spelling for that key using all capital letters, the # symbol for sharps, and the lowercase 'b' for the flat symbol. Leave a space between each note.</li><br>\n              <li>Please note, the answer will be wrong if you don't have a space between each note and use caps.</li> \n            </h3>\n          </ul>\n        </div>  \n      </section><br><br>\n      <div>\n        <label formArrayName=\"keyNames\" \n               class=\"formGroup\" \n               *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n          <input type=\"checkbox\" \n                 [formControlName]=\"i\">\n          <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n        </label>\n      </div>\n    \n      <div>\n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n          \n        <button class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>   \n        <br>  \n        <h3 id=\"drillKey\">Key to Drill:</h3>\n      </div>\n    </div>\n  </form>\n</body>\n"
 
 /***/ }),
 
@@ -625,16 +625,12 @@ var KeyPickComponent = /** @class */ (function () {
             keyNames: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormArray */](controls, this.minSelectedCheckboxes(1))
         });
     }
-    // thisKey = this.keysService.getScale(this.tyepKey)
     KeyPickComponent.prototype.ngOnInit = function () {
     };
     KeyPickComponent.prototype.getRandomKey = function () {
         var keyNumber = this.keysToDrill().length;
         console.log(keyNumber);
         var randomKey = Math.floor(Math.random() * keyNumber);
-        /** below is what is needed to query the db, then it needs to be connected to another button to
-         *  trigger the next drill.
-        **/
         // console.log(this.keyNames[randomKey].name);
         console.log(randomKey);
         var currentKey = this.keyNames[randomKey].name;
