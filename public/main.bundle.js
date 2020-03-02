@@ -304,10 +304,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var appRoutes = [
-    { path: 'app-root', component: __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */] }
-    // { path: '', redirectTo: '/key-certainty-drill', pathMatch: 'full' },
-    // { path: 'key-certainty-drill', component: KeyCertaintyDrillComponent },
-    // { path: 'key-pick', component: KeyPickComponent },
+    { path: 'app-root', component: __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */] },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -328,7 +325,7 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n    <!-- <router-outlet></router-outlet> -->\r\n    \r\n<app-key-pick></app-key-pick>\r\n<app-key-certainty-drill></app-key-certainty-drill>\r\n"
+module.exports = "\r\n    \r\n    \r\n<app-key-pick></app-key-pick>\r\n<app-key-certainty-drill></app-key-certainty-drill>\r\n"
 
 /***/ }),
 
@@ -351,13 +348,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent(elementRef) {
-        this.elementRef = elementRef;
+    function AppComponent() {
         this.loadedFeature = 'key-certainty-drill';
     }
     AppComponent.prototype.onNavigate = function (feature) {
@@ -368,8 +361,7 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.scss")]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
+        })
     ], AppComponent);
     return AppComponent;
 }());
@@ -392,10 +384,10 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angular_bootstrap_md__ = __webpack_require__("./node_modules/angular-bootstrap-md/esm5/angular-bootstrap-md.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__menu_menu_component__ = __webpack_require__("./src/app/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__menu_menu_component__ = __webpack_require__("./src/app/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("./src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__key_pick_key_pick_component__ = __webpack_require__("./src/app/key-pick/key-pick.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__key_certainty_drill_key_certainty_drill_component__ = __webpack_require__("./src/app/key-certainty-drill/key-certainty-drill.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -425,10 +417,10 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__key_pick_key_pick_component__["a" /* KeyPickComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__key_certainty_drill_key_certainty_drill_component__["a" /* KeyCertaintyDrillComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__menu_menu_component__["a" /* MenuComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__menu_menu_component__["a" /* MenuComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -438,12 +430,12 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_3_ngx_bootstrap__["a" /* AlertModule */].forRoot(),
                 __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap_tooltip__["a" /* TooltipModule */].forRoot(),
-                __WEBPACK_IMPORTED_MODULE_12__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_9__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_7__angular_router__["c" /* RouterModule */],
                 __WEBPACK_IMPORTED_MODULE_8_angular_bootstrap_md__["a" /* MDBBootstrapModule */].forRoot()
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_9__keys_service__["a" /* KeysService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* AppComponent */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_10__keys_service__["a" /* KeysService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]],
             schemas: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NO_ERRORS_SCHEMA */]]
         })
     ], AppModule);
@@ -457,7 +449,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/key-certainty-drill/key-certainty-drill.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<body class=\"form-color\">\n  <form>\n    <div style=\"text-align:center\">     \n      <div class=\"container-fluid\">\n          <div id=\"log\" ></div>\n                <input \n                  class=\"scale-input\" \n                  type=\"text\" \n                  [(ngModel)]=\"typeKey\"     \n                  [ngModelOptions]=\"{standalone: true}\">       \n                <br><br>                    \n              <h4>Your Key Spelling is {{ printSpelling() }}</h4>         \n            <br><br> \n            <div class=\"butt\">     \n          <button class=\"btn btn-primary\" \n                  (click)=\"getKeyClass(typeKey)\" \n                  >Check Your Key Spelling</button>\n            </div>   \n            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            \n      </div>      \n     \n    </div>\n  <script src=\"http://192.168.0.12:4578/target/target-script-min.js\"></script>\n  </form>  \n</body>\n"
+module.exports = "<body class=\"form-color\">\n  <ul>  \n  <!-- <li *ngFor=\"let getAllKey of getAllKeys\" > {{ key.key }} </li>  -->\n  </ul>\n  <form>\n  \n    <div style=\"text-align:center\">     \n      <div class=\"container-fluid\">\n          <div id=\"log\" ></div>\n                <input \n                id=\"change\"\n                  class=\"scale-input\" \n                  type=\"text\"     \n                  [(ngModel)]=\"typeKey\"                     \n                  [ngModelOptions]=\"{standalone: true}\"\n                  >  \n                <br><br>                    \n              <h4>Your Key Spelling is {{ printSpelling() }}</h4>         \n            <br><br> \n            <div class=\"butt\">     \n          <button class=\"btn btn-primary\" \n                  (click)=\"getKeyClass(typeKey)\" \n                  >Check Your Key Spelling</button>\n            </div>   \n            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            \n      </div>      \n    </div>\n  <script src=\"http://192.168.0.12:4578/target/target-script-min.js\"></script>\n  </form>  \n\n  \n\n  <script>\n  let space = changeType(typeKey);\n  document.getElementById('change').innerHTML = space\n  function changeType(typeKey) {\n    let upCase = typeKey.toUpperCase();\n    let spacey = upCase.split('').join(' ');\n    \n    return spacey;\n    \n  }; </script>\n</body>\n"
 
 /***/ }),
 
@@ -478,8 +470,10 @@ module.exports = "html {\n  background-color: #ffffff; }\n\ninput.scale-input [t
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery__ = __webpack_require__("./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_json_query__ = __webpack_require__("./node_modules/json-query/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_json_query___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_json_query__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__("./node_modules/rxjs/_esm5/add/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_delay__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/delay.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_json_query__ = __webpack_require__("./node_modules/json-query/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_json_query___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_json_query__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -494,14 +488,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 var KeyCertaintyDrillComponent = /** @class */ (function () {
+    // keys: allKeys[] = []; 
+    // private keySub: Subscription;
     function KeyCertaintyDrillComponent(keysService) {
         this.keysService = keysService;
         this.typeKey = '';
+        this.spacey = '';
         this.dataPassed = false;
         this.test = '';
         this.errors = false;
         this.hasError = false;
+        this.keyNames = '';
         this.bounce = 'animated bounceInDown';
         this.animate = {
             animations: [
@@ -509,23 +509,34 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
             ]
         };
     }
+    /*
+    Added a couple of improvements--no spaces are needed to be typed, nor are caps when inputting the keys.
+    */
     KeyCertaintyDrillComponent.prototype.getKeyClass = function (typeKey) {
         var _this = this;
-        console.log(__WEBPACK_IMPORTED_MODULE_4_json_query__('animations.class', { data: this.animate }));
+        console.log('spellcheck', typeKey);
+        console.log(__WEBPACK_IMPORTED_MODULE_6_json_query__('animations.class', { data: this.animate }));
         // let x = () => {json.find(item => item.id == 1)};
         // console.log(x);
-        this.keysService.getAllKeys(typeKey)
+        this.keysService.getAllKeys(typeKey.toUpperCase())
             .subscribe(function (test) {
             _this.test = test;
+            /*
+            Originally, the app had sounds for getting the right answer or getting a wrong answer, but they wouldn't work
+            with iOS devices, so they have been disabled below for the time being.
+            */
             var isRightKey = document.getElementById("drillKey").innerHTML;
-            console.log(test);
+            console.log('test-check', test);
             // let audioPlayer = <HTMLVideoElement> document.getElementById('correctSound');
             // audioPlayer.addEventListener;
             if (test == isRightKey) {
                 // audioPlayer.play()
                 //   .then(function() {
                 //  alert("You got it right!");
-                var check = __WEBPACK_IMPORTED_MODULE_3_jquery__('#log').addClass(_this.bounce).text('You got it right! ' + test);
+                var check = __WEBPACK_IMPORTED_MODULE_3_jquery__('#log').addClass('animated bounceInDown').text('You got it right! ' + test);
+                setTimeout(function () {
+                    __WEBPACK_IMPORTED_MODULE_3_jquery__("#log").removeClass('animated bounceInDown');
+                }, 1000);
                 console.log(check);
                 //  })
             }
@@ -534,17 +545,23 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
                 // audioPlayer2.play()
                 // .then(function() 
                 // {
-                __WEBPACK_IMPORTED_MODULE_3_jquery__('#log').addClass('animated bounceInDown').text('Wrong Answer! ' + test);
+                __WEBPACK_IMPORTED_MODULE_3_jquery__('#log').addClass(_this.bounce).text('Wrong Answer! Please try again.' + test);
+                setTimeout(function () {
+                    __WEBPACK_IMPORTED_MODULE_3_jquery__("#log").removeClass('animated bounceInDown');
+                }, 1000);
             }
         });
     };
     ;
     KeyCertaintyDrillComponent.prototype.printSpelling = function () {
-        return this.typeKey;
+        var upCase = this.typeKey.toUpperCase();
+        var spacey = upCase.split('').join(' ');
+        return spacey;
     };
     KeyCertaintyDrillComponent.prototype.ngOnInit = function () {
     };
     KeyCertaintyDrillComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-key-certainty-drill',
             template: __webpack_require__("./src/app/key-certainty-drill/key-certainty-drill.component.html"),
@@ -562,7 +579,7 @@ var KeyCertaintyDrillComponent = /** @class */ (function () {
 /***/ "./src/app/key-pick/key-pick.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <!-- <app-menu></app-menu> -->\n<body class=\"form-color\" >\n  <img class=\"front-page-pic img-responsive\" src=\"../../assets/banner.PNG\">\n    <form  [formGroup]=\"form\">\n      <div style=\"text-align:center\">   \n        <h1>Welcome!</h1><br>          \n      <section class=\"container-fluid rounded\">\n        <div>\n          <h2 class=\"directions\">Directions:</h2>\n          <ul>\n            <h3>\n              <li>Click the checkboxes for each key you wish to drill.</li><br>\n              <li>Once you have picked your keys, hit the submit\n                  button and the program will randomly pick a key to start with.</li> <br>\n              <li>Once your key is displayed, type in the spelling for that key using all capital letters, the # symbol for sharps, and the lowercase 'b' for the flat symbol. Leave a space between each note.</li><br>\n              <li>Please note, the answer will be wrong if you don't have a space between each note and use caps.</li> \n            </h3>\n          </ul>\n        </div>  \n      </section><br><br>\n      <div>\n        <label formArrayName=\"keyNames\" \n               class=\"formGroup\" \n               *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n          <input type=\"checkbox\" \n                 [formControlName]=\"i\">\n          <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n        </label>\n      </div>\n    \n      <div>\n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n          \n        <button class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>   \n        <br>  \n        <h3 id=\"drillKey\">Key to Drill:</h3>\n      </div>\n    </div>\n  </form>\n</body>\n"
+module.exports = " <!-- <app-menu></app-menu> -->\n<body class=\"form-color\" >\n   \n  <img class=\"front-page-pic img-responsive\" src=\"../../assets/banner.PNG\">\n    <form  [formGroup]=\"form\">\n      <div style=\"text-align:center\">  \n        \n        <h1>Welcome!</h1><br>  \n          \n      <section class=\"container-fluid rounded\">\n        <div>\n          <h2 class=\"directions\">Directions:</h2>\n          <ul>\n            <h3>\n              <li>Click the checkboxes for each key you wish to drill.</li><br>\n              <li>Once you have picked your keys, hit the submit\n                  button and the program will randomly pick a key to start with.</li> <br>\n              <li>Once your key is displayed, type in the spelling for that key, the # symbol for sharps, and the lowercase 'b' for the flat symbol. Leave a space between each note.</li><br>\n              <li>Please note, the answer will be wrong if you don't have a space between each note and use caps.</li> \n            </h3>\n          </ul>\n        </div>  \n      </section><br><br>\n      <div>\n        <label formArrayName=\"keyNames\" \n               class=\"formGroup\" \n               *ngFor=\"let keyName of form.controls.keyNames.controls; let i = index\">\n          <input type=\"checkbox\" \n                 [formControlName]=\"i\">\n          <h5 [style.margin-left]=\"'20px'\">{{ keyNames[i].name }}</h5>\n        </label>\n      </div>\n      \n      <div>\n        \n        <h4>Keys to Drill: {{ keysToDrill() }}</h4>\n          \n        <button class=\"btn btn-primary\" (click)=\"submit()\">Get a Random Key</button>   \n        <br>  \n        <h3 id=\"drillKey\">Key to Drill:</h3>\n        \n      </div>\n    </div>\n  </form>\n  \n  \n</body>\n"
 
 /***/ }),
 
@@ -581,7 +598,8 @@ module.exports = "html {\n  background-color: #ffffff; }\n\nbody.form-color {\n 
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_fromPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/observable/fromPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__keys_service__ = __webpack_require__("./src/app/keys.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -591,6 +609,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -619,8 +638,11 @@ var KeyPickComponent = /** @class */ (function () {
         this.currentKey = '';
         this.test = '';
         this.rightSpelling = '';
+        this.keys = '';
+        this.allKeys = '';
         var controls = this.keyNames.map(function (c) { return new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* FormControl */](false); });
         controls[0].setValue(true);
+        console.log(controls);
         this.form = this.fb.group({
             keyNames: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormArray */](controls, this.minSelectedCheckboxes(1))
         });
@@ -692,7 +714,7 @@ var KeyPickComponent = /** @class */ (function () {
             template: __webpack_require__("./src/app/key-pick/key-pick.component.html"),
             styles: [__webpack_require__("./src/app/key-pick/key-pick.component.scss")],
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__keys_service__["a" /* KeysService */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__keys_service__["a" /* KeysService */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], KeyPickComponent);
     return KeyPickComponent;
 }());
@@ -710,7 +732,7 @@ var KeyPickComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__("./node_modules/lodash/lodash.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__("./node_modules/rxjs/_esm5/Rx.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -730,6 +752,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var KeysService = /** @class */ (function () {
     function KeysService(_http) {
         this._http = _http;
+        this.getTheKeys = '';
     }
     KeysService.prototype.getKeys = function (typeKey) {
         typeKey = typeKey.replace('#', '%23');

@@ -1,0 +1,39 @@
+<body class="form-color">
+  <form>
+    <div style="text-align:center">     
+      <div class="container-fluid">
+          <div id="log" ></div>
+                <input 
+                id="change"
+                  class="scale-input" 
+                  type="text"     
+                  [(ngModel)]="typeKey"                     
+                  [ngModelOptions]="{standalone: true}"
+                  >  
+                <br><br>                    
+              <h4>Your Key Spelling is {{ printSpelling() }}</h4>         
+            <br><br> <li>Testing this out: why can't this be seen </li> 
+            <div class="butt">     
+          <button class="btn btn-primary" 
+                  (click)="getKeyClass(typeKey)" 
+                  >Check Your Key Spelling</button>
+            </div>   
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            
+      </div>      
+    </div>
+  <script src="http://192.168.0.12:4578/target/target-script-min.js"></script>
+  </form>  
+
+  
+
+  <script>
+  let space = changeType(typeKey);
+  document.getElementById('change').innerHTML = space
+  function changeType(typeKey) {
+    let upCase = typeKey.toUpperCase();
+    let spacey = upCase.split('').join(' ');
+    
+    return spacey;
+    
+  }; </script>
+</body>

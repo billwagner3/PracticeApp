@@ -1,0 +1,27 @@
+<body class="form-color">
+  <form>
+    <div style="text-align:center">     
+      <div class="container-fluid">
+          <div id="log" ></div>
+                <input 
+                  class="scale-input" 
+                  type="text"   
+                  [(ngModel)]="typeKey"     
+                  [ngModelOptions]="{standalone: true}"
+                  script="changeType">       
+                <br><br>                    
+              <h4>Your Key Spelling is {{ printSpelling(typeKey) }}</h4>         
+            <br><br> 
+            <div class="butt">     
+          <button class="btn btn-primary" 
+                  (click)="getKeyClass(typeKey)" 
+                  >Check Your Key Spelling</button>
+            </div>   
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>            
+      </div>      
+     
+    </div>
+  <script src="http://192.168.0.12:4578/target/target-script-min.js"></script>
+  </form>  
+  <script>function changeType() {</script>
+</body>

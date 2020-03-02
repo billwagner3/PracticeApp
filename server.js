@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 
 // connect to mongodb
-mongoose.connect('mongodb://localhost/keys');
+mongoose.connect('mongodb://localhost/keys'), { useNewUrlParser: true};
 mongoose.Promise = global.Promise;
 
 // API file for interacting with MongoDB
