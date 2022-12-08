@@ -33,7 +33,7 @@
     "chart.js": "^2.5.0",
     "console-log-html": "^2.0.2",
     "core-js": "^2.4.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "jquery": "^1.12.4",
